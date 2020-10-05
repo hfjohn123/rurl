@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title>Rurl - Short URL Generator</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="css/Global.css">
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+
+</head>
+<body>
+<header>
+    <table>
+        <tbody>
+        <tr>
+            <td>API</td>
+            <td>About</td>
+            <td><img src="img/github-icon-png-8.png"/></td>
+        </tr>
+        </tbody>
+    </table>
+</header>
+<div id="container">
+    <h1 id="logo">R<span id="small_logo">url</span></h1>
+    <form class="bar">
+        <input type="text" placeholder="Type the url here...">
+        <button type="submit">Go!</button>
+    </form>
+    <div class="loader">Loading...</div>
+    <div class="result">
+        <h4>Congrats! Here is ur short url</h4>
+        <h3 id="res">Result here</h3>
+        <button id="copy">Copy</button>
+        <script>
+            var clipboard = new ClipboardJS("#copy");
+
+            clipboard.on('success', function(e) {
+                console.log(e);
+            });
+
+            clipboard.on('error', function(e) {
+                console.log(e);
+            });
+        </script>
+    </div>
+</div>
+</body>
+</html>
