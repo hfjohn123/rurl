@@ -27,7 +27,7 @@ public class MainController {
 
     @RequestMapping("/API")
     public String API() {
-        return "https://app.swaggerhub.com/apis-docs/hfjohn123/Rurlapi/1.0.0";
+        return "API.html";
     }
 
 }
