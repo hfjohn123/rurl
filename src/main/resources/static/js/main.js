@@ -2,7 +2,7 @@ $(document).ready(function () {
     $(".bar").submit(function (e) {
         e.preventDefault();
         var address = $(".bar input").val().toString();
-        if (str.replace(/\s/g, "") != "") {
+        if (address.replace(/\s/g, "") != "") {
             if ((!address.startsWith("http://")) || (!address.startsWith("https://"))) {
                 address = "http://" + address;
             }
