@@ -28,7 +28,7 @@ $(document).ready(function () {
                         success: function (data) {
                             $(".loader").hide();
                             $(".result").show();
-                            res_url = "hfjohn123.tk/s/" + data._links.self.href.replace(/.+entry\//gi, "")
+                            res_url = "hfjohn123.tk:18080/s/" + data._links.self.href.replace(/.+entry\//gi, "")
                             $("#res").replaceWith("<input id='res' type=\"text\" value=" + res_url + ">");
                             $("#copy").replaceWith(" <button id=\"copy\" data-clipboard-action=\"copy\" data-clipboard-text='" + res_url + "'>Copy</button>")
                         },
